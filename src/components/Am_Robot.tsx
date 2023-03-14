@@ -1,17 +1,14 @@
-import { ReactElement, useState } from 'react';
-
-
 interface AmRobotProps {
-    name: string;
+    sumAnswer: number;
+    onSumAnswer: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const AmRobot = (props: AmRobotProps): ReactElement => {
-    const [amRobot, setAmRobot] = useState('');
+const AmRobot : React.FC<AmRobotProps> = ({ sumAnswer, onSumAnswer }) => {
 
     return (
         <>
             <label htmlFor="am-robot">What is 2+2?: </label>
-            <input type="text" id="am-robot" value={amRobot} />
+            <input type="number" id="am-robot" value={sumAnswer} onChange={onSumAnswer} />
             <br />
         </>
     );

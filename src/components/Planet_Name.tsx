@@ -1,16 +1,13 @@
-import { ReactElement, useState } from 'react';
-
 interface PlanetNameProps {
-    name: string;
+    planetName: string;
+    onChangePlanetName: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const PlanetName = (props: PlanetNameProps): ReactElement => {
-    const [planetName, setPlanetName] = useState('');
-
+const PlanetName : React.FC<PlanetNameProps> = ({ planetName, onChangePlanetName }) => {
     return (
         <>
             <label htmlFor="planet-name">Planet Name: </label>
-            <input type="text" id="planet-name" value={planetName} />
+            <input type="text" id="planet-name" value={planetName} onChange={onChangePlanetName} />
             <br />
         </>
     );

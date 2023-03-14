@@ -1,16 +1,14 @@
-import { ReactElement, useState } from 'react';
-
 interface SpareReasonProps {
-    name: string;
+    spareReason: string;
+    onChangeReason: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const SpareReason = (props: SpareReasonProps): ReactElement => {
-    const [spareReason, setSpareReason] = useState('');
+const SpareReason : React.FC<SpareReasonProps> = ({ spareReason, onChangeReason }) => {
 
     return (
         <>
             <label htmlFor="spare-reason">Reason for sparing: </label>
-            <input type="textarea" id="spare-reason" value={spareReason} />
+            <input type="textarea" id="spare-reason" value={spareReason} onChange={onChangeReason}/>
             <br />
         </>
     );
