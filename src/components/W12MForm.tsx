@@ -19,7 +19,7 @@ const W12MForm = () => {
 	return (
 		<section className='w12MForm'>
 			<W12MHeader />
-			<SpeciesName name={ speciesName } onChangeSpeciesName={(e : any) => setSpeciesName(e.target.value)}/>
+			<SpeciesName speciesName={ speciesName } onChangeSpeciesName={(e : any) => setSpeciesName(e.target.value)}/>
 			<PlanetName planetName={ planetName } onChangePlanetName={(e : any) => setPlanetName(e.target.value)} />
 			<NumberOfBeings numberOfBeings={ numberOfBeings } onChangeNumberOfBeings={(e : any) => setNumberOfBeings(e.target.value)}/>
 			<AmRobot sumAnswer={ amRobot } onSumAnswer={(e : any) => setAmRobot(e.target.value)} />
