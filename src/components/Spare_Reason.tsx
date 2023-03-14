@@ -1,16 +1,17 @@
-import React from 'react';
+import { ReactElement, useState } from 'react';
 
 interface SpareReasonProps {
     name: string;
 }
 
-function SpareReason(props: SpareReasonProps) {
-    const [spareReason, setSpareReason] = React.useState('');
+const SpareReason = (props: SpareReasonProps): ReactElement => {
+    const [spareReason, setSpareReason] = useState('');
 
     return (
         <>
             <label htmlFor="spare-reason">Reason for sparing: </label>
-            <input type="text" id="spare-reason" value={spareReason} />
+            <input type="textarea" id="spare-reason" value={spareReason} />
+            <br />
         </>
     );
 }

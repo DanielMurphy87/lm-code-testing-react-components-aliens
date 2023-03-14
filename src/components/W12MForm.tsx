@@ -22,6 +22,7 @@ const W12MForm = () => {
 			<NumberOfBeings name={numberOfBeings }/>
 			<AmRobot name={amRobot }/>
 			<SpareReason name={spareReason }/>
+			<button>Submit</button>
 			{/* REST OF FORM GOES HERE */}
 		</section>
 	);
