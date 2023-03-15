@@ -12,7 +12,7 @@ const W12MForm = () => {
 	const [planetName, setPlanetName] = useState<string>('earth');
 	const [numberOfBeings, setNumberOfBeings] = useState<number>(0);
 	const [amRobot, setAmRobot] = useState<number>(0);
-	const [spareReason, setSpareReason] = useState<string>('we like to spare our species');
+	const [spareReason, setSpareReason] = useState<string>('all your base are belong to us');
 
 	const handleClick = () => { console.log(speciesName, planetName, numberOfBeings, amRobot, spareReason);};
 
